@@ -6,10 +6,33 @@ function Greeting() // components always start with a capital letter and always 
 { 
     return (
       <div>
-        <h2>My First Component</h2>
+        <Person />
+        <Message />
       </div>
     )
 }
+
+const Person = () => <h2>Hi</h2>;
+const Message = () => 
+{
+  return <p>this is my message</p>;
+};
+
+/*
+
+  NORMAL CONVENTION IS TO HAVE AN "APP" COMPONENT IN WHICH
+  THE REST OF THE COMPONENTS ARE GOING TO GO INTO TO BUILD
+  A PAGE EX: "NAVBAR" COMPONENT, "FOOTER" COMPONENT ETC.
+
+  IT IS NORMAL FOR THOSE COMPONENTS TO ALSO HAVE
+  OTHER COMPONENTS NESTED INSIDE OF THEM
+
+  COMPONENTS ARE LIKE FUNCTIONS IN WHICH THEY ARE MADE IF
+  THE "INFORMATION" INSIDE OF THEM IS GOING TO BE 
+  REPEATED ELSEWHERE.
+
+*/
+
 
 // function Greeting() 
 // { 
