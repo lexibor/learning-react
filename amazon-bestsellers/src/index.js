@@ -3,16 +3,37 @@ import ReactDOM from 'react-dom/client';
 
 import './index.css';
 
-const title = "Iron Flame (The Empyrean, 2)";
-const author = "Rebecca Yarros";
-const img = "./images/book-1.jpg";
+const firstBook =
+{
+    author: 'Rebecca Yarros',
+    title: 'Iron Flame (The Empyrean, 2)',
+    img: './images/book-1.jpg'
+}
+
+const secondBook =
+{
+    author: 'Keila Shaheen',
+    title: 'The Shadow Work Journal',
+    img: './images/book-2.jpg'
+}
+
 
 function BookList()
 {
     return (
         <section className='booklist'>
-            <Book job="developer" />
-            <Book title="random title" number={22}/>
+            <Book 
+            author={firstBook.author} 
+            title={firstBook.title} 
+            img={firstBook.img} 
+            />
+
+            <Book 
+            author={secondBook.author}
+             title={secondBook.title} 
+             img={secondBook.img} 
+             />
+
         </section>
     )
 }
@@ -20,6 +41,7 @@ function BookList()
 const Book = (props) =>
 {
     console.log(props);
+    const { img, title, author } = props;
     
     return(
         <article className='book'>
@@ -29,9 +51,6 @@ const Book = (props) =>
 
             <h4>{author}</h4>
 
-            <p>{props.job}</p>
-            <p>{props.title}</p>
-            
         </article>
     );
 };
