@@ -26,7 +26,10 @@ function BookList()
             author={firstBook.author} 
             title={firstBook.title} 
             img={firstBook.img} 
-            />
+            >
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Est eius asperiores facilis cum molestias odio fugiat quo sint. Ipsum eaque excepturi voluptates eos, voluptatibus earum libero eveniet facilis odit quia!</p>
+                <button>click me!</button>
+                </Book>
 
             <Book 
             author={secondBook.author}
@@ -41,7 +44,8 @@ function BookList()
 const Book = (props) =>
 {
     console.log(props);
-    const { img, title, author } = props;
+    
+    const { img, title, author, children } = props;
     
     return(
         <article className='book'>
@@ -51,6 +55,7 @@ const Book = (props) =>
 
             <h4>{author}</h4>
 
+            {children}
         </article>
     );
 };
