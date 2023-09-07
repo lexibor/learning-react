@@ -28,57 +28,45 @@ const books = [
 
 function BookList()
 {
+    const someValue = 'shakeAndBake';
+
+    const displayValue = () =>
+    {
+        console.log(someValue);
+    }
+
     return(
         <section className='booklist'> 
-        <EventExamples/>
+       
         {books.map((book) => {
             
             return(
                 <div>
-                    <Book {...book} key={book.id}/>
+                    <Book {...book} key={book.id} displayValue = {displayValue}/>
                 </div>
             );
 
         })} 
+
         </section>
     )
 } 
 
-const EventExamples = () =>
-{
-
-    return (
-        <section>
-            <form>
-                <h2>Typical Form</h2>
-                <input type="text" 
-                name='example' 
-                onChange={(e) => console.log(e.target.value)}
-                style={{margin: '1rem0'}}/>
-                <button type='submit'>Submit</button>
-                <div>
-                    <button onClick={(e) =>
-                    {
-                        e.preventDefault();
-                        console.log('click me');
-                    }}>click me</button>
-                </div>
-            </form>
-        </section>
-    )
-}
 
 const Book = (props) =>
 {
     console.log(props);
     
-    const { img, title, author } = props;
+    const { img, title, author, displayValue } = props;
+
     
     return(
         <article className='book'>
             <img src={img} alt={title} />
 
             <h2>{title}</h2>
+
+            <button onClick={displayValue}>click me</button>
 
             <h4>{author}</h4>
 
