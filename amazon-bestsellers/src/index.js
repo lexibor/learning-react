@@ -30,6 +30,7 @@ function BookList()
 {
     return(
         <section className='booklist'> 
+        <EventExamples/>
         {books.map((book) => {
             
             return(
@@ -42,6 +43,42 @@ function BookList()
         </section>
     )
 } 
+
+const EventExamples = () =>
+{
+    const handleFormInput = (e) =>
+    {
+        console.log(e.target);
+        console.log(e.target.name);
+        console.log(e.target.value);
+        console.log('handle form input');
+    }
+
+    const handleButtonClick = () =>
+    {
+        alert('handle button click');
+    }
+
+    const handleFormSubmission = (e) =>
+    {
+        e.preventDefault();
+        console.log('form submitted');
+    }
+
+
+    return (
+        <section>
+            <form onSubmit={handleFormSubmission}>
+                <h2>Typical Form</h2>
+                <input type="text" name='example' onChange={handleFormInput} style={{margin: '1rem0'}}/>
+                <button type='submit'>Submit</button>
+                <div>
+                    <button onClick={handleButtonClick}>click me</button>
+                </div>
+            </form>
+        </section>
+    )
+}
 
 const Book = (props) =>
 {
