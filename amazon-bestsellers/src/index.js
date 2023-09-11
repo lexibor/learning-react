@@ -2,22 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 
 import './index.css';
-
-const books = [
-    {
-        author: 'Rebecca Yarros',
-        title: 'Iron Flame (The Empyrean, 2)',
-        img: './images/book-1.jpg',
-        id: 1
-    },
-
-    {
-        author: 'Keila Shaheen',
-        title: 'The Shadow Work Journal',
-        img: './images/book-2.jpg',
-        id: 2
-    }
-];
+import {books} from './books'
 
 // const names = ['joe', 'peter', 'susan'];
 
@@ -28,17 +13,11 @@ const books = [
 
 function BookList()
 {
-    const getBook = (id) =>
-    {
-        const book = books.find((book) => book.id === id);
-        console.log(book);
-    }
-
     return(
         <section className='booklist'> 
        
         {books.map((book) => {
-            return <Book {...book} key={book.id} getBook = {getBook} />;
+            return <Book {...book} key={book.id} />;
         })} 
 
         </section>
@@ -50,7 +29,7 @@ const Book = (props) =>
 {
     console.log(props);
     
-    const { img, title, author, getBook, id } = props;
+    const { img, title, author } = props;
 
     
     return(
@@ -58,8 +37,6 @@ const Book = (props) =>
             <img src={img} alt={title} />
 
             <h2>{title}</h2>
-
-            <button onClick={() => getBook(id)}>click me</button>
 
             <h4>{author}</h4>
 
