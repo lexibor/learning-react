@@ -1,4 +1,4 @@
-const books = [
+export const books = [
     {
         author: 'Rebecca Yarros',
         title: 'Iron Flame (The Empyrean, 2)',
