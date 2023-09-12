@@ -21,6 +21,6 @@ export const books = [
         author: 'J.R.R Tolkien',
         title: 'The Lord of the Rings Illustrated',
         img: img3,
-        id: 2
+        id: 3
     }
 ];

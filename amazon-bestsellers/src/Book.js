@@ -1,10 +1,10 @@
-const Book = (props) =>
+export const Book = (props) =>
 {
     console.log(props);
     
-    const { img, title, author } = props;
+    const { img, title, author, number } = props;
 
-    
+    console.log(number);
     return(
         <article className='book'>
             <img src={img} alt={title} />
@@ -13,6 +13,9 @@ const Book = (props) =>
 
             <h4>{author}</h4>
 
+            <span className='number'>#{number + 1}</span>
         </article>
     );
 };
+
+export default Book;
