@@ -18,19 +18,15 @@ const RandomComponent = () =>
 {
   useEffect(() => 
   {
-    console.log('interesting');
-
-    const intId = setInterval(() =>
+    
+    const someFunc = () =>
     {
-      console.log('interval');
-    }, 1000);
-
-// CLEANUP FUNCTION SO INTERVAL DOESNT RUN FOREVER
-    return () =>
-    {
-      clearInterval(intId);
-      console.log('cleanup');
+      //some logic
     }
+
+    window.addEventListener('scroll', someFunc);
+
+    return () => window.removeEventListener('scroll', someFunc);
 
   } , [])
 
