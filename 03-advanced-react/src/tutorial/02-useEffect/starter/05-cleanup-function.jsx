@@ -4,7 +4,7 @@ const CleanupFunction = () => {
 
   const [toggle, setToggle] = useState(false);
 
-  //console.log(toggle);
+  console.log('render');
 
   return (
     <div>
@@ -19,6 +19,19 @@ const RandomComponent = () =>
   useEffect(() => 
   {
     console.log('interesting');
+
+    const intId = setInterval(() =>
+    {
+      console.log('interval');
+    }, 1000);
+
+// CLEANUP FUNCTION SO INTERVAL DOESNT RUN FOREVER
+    return () =>
+    {
+      clearInterval(intId);
+      console.log('cleanup');
+    }
+
   } , [])
 
   return (
