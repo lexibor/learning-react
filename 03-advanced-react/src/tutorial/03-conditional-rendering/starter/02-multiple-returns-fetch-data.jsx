@@ -25,8 +25,6 @@ const MultipleReturnsFetchData = () =>
           const data = await response.json();
 
           setUser(data);
-
-          
         } 
         catch (error) 
         {
@@ -49,7 +47,8 @@ const MultipleReturnsFetchData = () =>
   {
     return <h2>there was an error</h2>
   }
-const {avatar_url, name, company, bio} = user;
+  const {avatar_url, name, company, bio} = user;
+
   return (
     <div>
       <img style={{width: '150px', borderRadius: '25px'}} src={avatar_url} alt={name} />
