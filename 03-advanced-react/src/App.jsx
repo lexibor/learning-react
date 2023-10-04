@@ -1,8 +1,8 @@
-//import Starter from './tutorial/05-leverage-javascript/starter/List'
+import Starter from './tutorial/06-forms/starter/01-controlled-inputs'
 // import Final from './tutorial/03-conditional-rendering/final/01-multiple-returns-basics'
 
 
-import List from './tutorial/05-leverage-javascript/starter/List';
+//import List from './tutorial/05-leverage-javascript/starter/List';
 
 // import {Home, About} from "./tutorial/04-project-structure/starter/Pages";
 
@@ -11,7 +11,7 @@ import List from './tutorial/05-leverage-javascript/starter/List';
 function App() {
   return (
     <div className='container'>
-      <List />
+      <Starter />
     </div>
   );
 }
