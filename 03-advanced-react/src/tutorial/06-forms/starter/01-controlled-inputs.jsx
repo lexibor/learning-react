@@ -18,6 +18,8 @@ const ControlledInputs = () =>
   const handleSubmit = (e) =>
   {
     e.preventDefault();
+
+    //do somethingy
     console.log(name, email);
   }
 

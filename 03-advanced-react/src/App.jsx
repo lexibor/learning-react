@@ -1,4 +1,4 @@
-import Starter from './tutorial/06-forms/starter/01-controlled-inputs'
+import Starter from './tutorial/06-forms/starter/02-user-challenge'
 // import Final from './tutorial/03-conditional-rendering/final/01-multiple-returns-basics'
 
 
