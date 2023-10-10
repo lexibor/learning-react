@@ -1,4 +1,4 @@
-import Starter from './tutorial/06-forms/starter/04-other-inputs'
+import Starter from './tutorial/06-forms/starter/05-form-data'
 // import Final from './tutorial/03-conditional-rendering/final/01-multiple-returns-basics'
 
 
