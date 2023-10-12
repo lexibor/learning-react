@@ -4,13 +4,21 @@ const UseRefBasics = () => {
   const [value, setValue] = useState(0);
 
   const refContainer = useRef(null); //react sets up as an object
+
+  const isMounted = useRef(false);
+
   //console.log(refContainer);
 
   //useEffect happens after initial render
-  // useEffect(() =>
-  // {
-  //   console.log(refContainer);
-  // });
+  useEffect(() =>
+  {
+    if(!isMounted.current)
+    {
+      isMounted.current = true;
+      return
+    }
+    console.log('re-render');
+  }, [value]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
