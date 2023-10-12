@@ -9,13 +9,18 @@ const UseRefBasics = () => {
 
   //console.log(refContainer);
 
+  useEffect(() =>
+  {
+    refContainer.current.focus(); //vanilla js
+  });
+
   //useEffect happens after initial render
   useEffect(() =>
   {
     if(!isMounted.current)
     {
       isMounted.current = true;
-      return
+      return;
     }
     console.log('re-render');
   }, [value]);
