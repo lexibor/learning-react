@@ -1,13 +1,13 @@
 import { useEffect, useState } from "react";
  
-const useFetch = (url) =>
+const useFetchUser = (url) =>
 {
     const [isLoading, setIsLoading] = useState(true);
     const [isError, setIsError] = useState(false);
-    const [data, setData] = useState(null);
+    const [user, setUser] = useState(null);
 
     useEffect(() => {
-        const fetchData = async () => {
+        const fetchUser = async () => {
           try {
             const resp = await fetch(url);
             // console.log(resp);
@@ -17,8 +17,8 @@ const useFetch = (url) =>
               return;
             }
     
-            const response = await resp.json();
-            setData(response);
+            const user = await resp.json();
+            setUser(user);
           } catch (error) {
             setIsError(true);
             // console.log(error);
@@ -26,10 +26,10 @@ const useFetch = (url) =>
           // hide loading
           setIsLoading(false);
         };
-        fetchData();
+        fetchUser();
       }, []);  
       
-      return {isLoading, isError, data}
+      return {isLoading, isError, user}
 }
 
-export default useFetch;
+export default useFetchUser;

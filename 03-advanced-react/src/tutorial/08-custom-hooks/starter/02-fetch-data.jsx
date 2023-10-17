@@ -1,10 +1,13 @@
 import { useEffect, useState } from 'react';
-import useFetchUser from './useFetch';
+import useFetch from './useFetch';
+//import useFetchUser from './useFetchUser';
 const url = 'https://api.github.com/users/QuincyLarson';
 
 const FetchData = () => {
   
-  const {isLoading, isError, user} = useFetchUser(url);
+  //const {isLoading, isError, user} = useFetchUser(url);
+
+  const {isLoading, isError, data:user} = useFetch(url); //data is using an alias
   
   // order matters
   // don't place user JSX before loading or error
