@@ -1,17 +1,12 @@
 import Starter from './tutorial/09-context-api/starter/Navbar'
-// import Final from './tutorial/03-conditional-rendering/final/01-multiple-returns-basics'
-
-
-//import List from './tutorial/05-leverage-javascript/starter/List';
-
-// import {Home, About} from "./tutorial/04-project-structure/starter/Pages";
-
+import Final from './tutorial/09-context-api/final/context'
 
 
 function App() {
   return (
     <div className='container'>
       <Starter />
+      <Final />
     </div>
   );
 }
