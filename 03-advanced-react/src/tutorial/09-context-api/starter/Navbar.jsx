@@ -7,7 +7,7 @@ export const NavbarContext = createContext();
 
 // custom hook
 
-export const useAppContext = () => useContext(NavbarContext);
+export const useAppContext = () => useContext(NavbarContext); //hook
 
 const Navbar = () => {
 
