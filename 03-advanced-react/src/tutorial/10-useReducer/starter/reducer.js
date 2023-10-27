@@ -1,8 +1,6 @@
 import { CLEAR_LIST, RESET_LIST, REMOVE_ITEM } from './actions';
 import { data } from '../../../data';
 
-
-
 const reducer = (state, action) =>
 {
   //state is state before the object
