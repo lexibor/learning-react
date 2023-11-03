@@ -8,7 +8,6 @@ const LowerState = () => {
 
 
   const value = useMemo(() => slowFunction(), [])
-  
 
   console.log(value);
 
